@@ -63,12 +63,7 @@ variable ssl {
   default     = false
 }
 
-variable private_key {
-  description = "Content of the private SSL key. Required if ssl is `true`."
-  default     = ""
-}
-
-variable certificate {
-  description = "Content of the SSL certificate. Required if ssl is `true`."
-  default     = ""
+variable "certificate_name" {
+  description = "name of existing certificate in current project"
+  default = "default"
 }
